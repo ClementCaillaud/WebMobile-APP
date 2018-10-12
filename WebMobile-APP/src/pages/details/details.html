@@ -6,20 +6,36 @@
 
 </ion-header>
 
-
-<ion-content padding>
+<ion-content padding text-wrap>
+  <img src="{{evenement.fields.media_1}}">
   <h1>{{evenement.fields.nom}}</h1>
 
-  <p>
-    {{evenement.fields.description}}
-  </p>
+  <ion-item>
+    <ion-icon name="time" item-start large ></ion-icon>
+    <h2>{{evenement.fields.date}}</h2>
+    <p>{{evenement.fields.heure_debut}} \- {{evenement.fields.heure_fin}}</p>
+  </ion-item>
 
-  <ul>
-    <li>
-      Le {{evenement.fields.date}} à {{evenement.fields.heure_debut}}
-    </li>
-    <li>
-      {{evenement.fields.lieu}}
-    </li>
-  </ul>
+  <ion-item>
+    <ion-icon name="pin" item-start large ></ion-icon>
+    <p>{{evenement.fields.lieu}}</p>
+    <p>{{evenement.fields.adresse}}</p>
+    <p>{{evenement.fields.ville}}</p>
+  </ion-item>
+
+  <ion-item>
+    <h2>Description</h2>
+    <p>{{evenement.fields.description}}</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="calendar" item-start large></ion-icon>
+    <p>{{evenement.fields.lien_agenda}}</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon name="globe" item-start large></ion-icon>
+    <p>{{evenement.fields.url_internet_1}}</p>
+  </ion-item>
+
 </ion-content>

@@ -8,10 +8,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetailsPage
 {
   evenement : any;
+  affichage: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
+    this.affichage = false;
     this.evenement = this.navParams.get("evenement");
+  }
+
+  toggle_description()
+  {
+    this.affichage = !this.affichage;
   }
 
 }
