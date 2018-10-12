@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Détails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1>{{evenement.fields.nom}}</h1>
+
+  <p>
+    {{evenement.fields.description}}
+  </p>
+
+  <ul>
+    <li>
+      Le {{evenement.fields.date}} à {{evenement.fields.heure_debut}}
+    </li>
+    <li>
+      {{evenement.fields.lieu}}
+    </li>
+  </ul>
+</ion-content>
