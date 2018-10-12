@@ -1,0 +1,7 @@
+{
+  "name": "WebMobile-APP",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
