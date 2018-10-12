@@ -3,15 +3,25 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Accueil</ion-title>
+    <ion-title>Quoi de prévu aujourd'hui ?</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Quoi de prévu aujourd'hui ?</h3>
-  <ion-list>
-    <button ion-item *ngFor="let evenement of (listeEvenements | async)?.records" (click)="ouvrir_evenement(evenement)">
-      {{evenement.fields.nom}}
-    </button>
-  </ion-list>
+
+  <ion-card color="dark" text-wrap margin-bottom ion-item *ngFor="let evenement of (listeEvenements | async)?.records" (click)="ouvrir_evenement(evenement)">
+    <h2 text-center>{{evenement.fields.nom}}</h2>
+    <img src="{{evenement.fields.media_1}}">
+
+    <ion-item color="dark">
+      <ion-icon name="pin" item-start large></ion-icon>
+      <h2>{{evenement.fields.lieu}}</h2>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-icon name="time" item-start large ></ion-icon>
+      <h2>{{evenement.fields.date}}</h2>
+      <p>{{evenement.fields.heure_debut}}</p>
+    </ion-item>
+  </ion-card>
 </ion-content>
