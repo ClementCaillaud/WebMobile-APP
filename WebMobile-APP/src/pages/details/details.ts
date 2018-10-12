@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the DetailsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @Component({
   selector: 'page-details',
   templateUrl: 'details.html',
@@ -15,11 +8,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetailsPage
 {
   evenement : any;
+  affichage: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams)
   {
+    this.affichage = false;
     this.evenement = this.navParams.get("evenement");
-    console.log(this.evenement);
+  }
+
+  toggle_description()
+  {
+    this.affichage = !this.affichage;
   }
 
 }
