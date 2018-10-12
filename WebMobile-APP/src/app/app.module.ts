@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { DetailsPage} from '../pages/details/details';
+import { ProximitePage} from '../pages/proximite/proximite';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -18,7 +19,8 @@ import { ApiProvider } from '../providers/api/api';
     MyApp,
     HomePage,
     ListPage,
-    DetailsPage
+    DetailsPage,
+    ProximitePage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { ApiProvider } from '../providers/api/api';
     MyApp,
     HomePage,
     ListPage,
-    DetailsPage
+    DetailsPage,
+    ProximitePage
   ],
   providers: [
     StatusBar,

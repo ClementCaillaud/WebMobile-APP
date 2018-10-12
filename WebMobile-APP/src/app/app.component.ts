@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
-import { DetailsPage } from '../pages/details/details';
+import { ProximitePage } from '../pages/proximite/proximite';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +24,7 @@ export class MyApp {
     this.pages = [
       { title: 'Aujourd\'hui', component: HomePage, icone: "sunny" },
       { title: 'Evénements à venir', component: ListPage, icone: "calendar" },
-      { title: 'A proximité', component: HomePage, icone: "locate" },
+      { title: 'A proximité', component: ProximitePage, icone: "locate" },
       { title: 'Mes favoris', component: HomePage, icone: "star" }
     ];
 
