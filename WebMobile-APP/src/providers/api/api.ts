@@ -15,7 +15,6 @@ export class ApiProvider
 
   constructor(public http: HttpClient)
   {
-    console.log('Hello ApiProvider Provider');
     this.htmlAPI = "https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole";
   }
 
@@ -52,7 +51,6 @@ export class ApiProvider
     }
 
     var dateFormatee: string = dateJour.getFullYear() + "-" + mois + "-" + jour;
-    console.log(dateFormatee);
     var adresse: string = this.htmlAPI + "&facet=date&refine.date="+dateFormatee;
 
     return this.http.get(adresse);
