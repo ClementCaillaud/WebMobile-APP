@@ -8,5 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Evénements à venir</h3>
+  <h3>Quoi de prévu aujourd'hui ?</h3>
+  <ion-list>
+    <button ion-item *ngFor="let evenement of (listeEvenements | async)?.records" (click)="ouvrir_evenement(evenement)">
+      {{evenement.fields.nom}}
+    </button>
+  </ion-list>
 </ion-content>

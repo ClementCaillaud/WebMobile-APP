@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
 import { ApiProvider } from './../../providers/api/api';
 import { DetailsPage} from '../details/details';
@@ -15,7 +15,7 @@ export class ListPage
 
   listeEvenements : Observable<any>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public apiProvider: ApiProvider )
+  constructor(public navCtrl: NavController, public apiProvider: ApiProvider )
   {
     this.charger_evenements();
   }

@@ -27,4 +27,35 @@ export class ApiProvider
     return this.http.get(adresse);
   }
 
+  charger_evenements_aujourdui()
+  {
+    var dateJour: any = new Date();
+    var jour: string;
+    var mois: string;
+
+    if(dateJour.getDate() < 10)
+    {
+      jour = "0"+(dateJour.getDate());
+    }
+    else
+    {
+      jour = (dateJour.getDate());
+    }
+
+    if(dateJour.getMonth() + 1 < 10)
+    {
+      mois = "0"+(dateJour.getMonth() + 1);
+    }
+    else
+    {
+      mois = (dateJour.getMonth() + 1);
+    }
+
+    var dateFormatee: string = dateJour.getFullYear() + "-" + mois + "-" + jour;
+    console.log(dateFormatee);
+    var adresse: string = this.htmlAPI + "&facet=date&refine.date="+dateFormatee;
+
+    return this.http.get(adresse);
+  }
+
 }
